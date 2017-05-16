@@ -1,0 +1,3 @@
+C:\Users\Gabriela\Documents\Programación l\LAB07\PaquetesTuristicos-avance\PaquetesTuristicos\CourseStore.Persistence\obj\Debug\PaquetesTuristicos.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Gabriela\Documents\Programación l\LAB07\PaquetesTuristicos-avance\PaquetesTuristicos\CourseStore.Persistence\obj\Debug\CourseStore.Persistence.Properties.Resources.resources
+C:\Users\Gabriela\Documents\Programación l\LAB07\PaquetesTuristicos-avance\PaquetesTuristicos\CourseStore.Persistence\obj\Debug\PaquetesTuristicos.Persistence.csproj.GenerateResource.Cache
