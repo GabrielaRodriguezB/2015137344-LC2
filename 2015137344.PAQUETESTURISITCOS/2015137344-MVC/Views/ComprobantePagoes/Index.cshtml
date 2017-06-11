@@ -1,0 +1,52 @@
+﻿@model IEnumerable<_2015137344_ENT.Entities.ComprobantePago>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoComprobante.NomTipoComprobante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VentaPaquete.VentaPaqueteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumComprobantePago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VentaPaqueteId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoComprobante.NomTipoComprobante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VentaPaquete.VentaPaqueteId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumComprobantePago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VentaPaqueteId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ComprobantePagoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ComprobantePagoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ComprobantePagoId })
+        </td>
+    </tr>
+}
+
+</table>

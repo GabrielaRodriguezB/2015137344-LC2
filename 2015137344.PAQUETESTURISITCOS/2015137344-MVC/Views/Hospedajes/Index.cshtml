@@ -1,0 +1,58 @@
+﻿@model IEnumerable<_2015137344_ENT.Entities.Hospedaje>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioServicioTuristico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomHospedaje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CalificacionHospedaje.Calificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoriaHospedaje.NomCategoriaHospedaje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoHospedaje.NomTipoHospedaje)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioServicioTuristico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomHospedaje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CalificacionHospedaje.Calificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoriaHospedaje.NomCategoriaHospedaje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoHospedaje.NomTipoHospedaje)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ServicioTuristicoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ServicioTuristicoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ServicioTuristicoId })
+        </td>
+    </tr>
+}
+
+</table>

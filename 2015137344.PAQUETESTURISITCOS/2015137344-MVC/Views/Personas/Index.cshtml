@@ -1,0 +1,52 @@
+﻿@model IEnumerable<_2015137344_ENT.Entities.Persona>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DocIdPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApePatPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApeMatPersona)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocIdPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApePatPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApeMatPersona)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PersonaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PersonaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PersonaId })
+        </td>
+    </tr>
+}
+
+</table>

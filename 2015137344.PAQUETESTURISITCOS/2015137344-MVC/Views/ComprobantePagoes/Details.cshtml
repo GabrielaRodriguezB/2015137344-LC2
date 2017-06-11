@@ -1,0 +1,51 @@
+﻿@model _2015137344_ENT.Entities.ComprobantePago
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ComprobantePago</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoComprobante.NomTipoComprobante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoComprobante.NomTipoComprobante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VentaPaquete.VentaPaqueteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VentaPaquete.VentaPaqueteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumComprobantePago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumComprobantePago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VentaPaqueteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VentaPaqueteId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ComprobantePagoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

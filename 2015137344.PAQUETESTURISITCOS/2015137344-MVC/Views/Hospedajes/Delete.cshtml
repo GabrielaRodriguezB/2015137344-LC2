@@ -1,0 +1,65 @@
+﻿@model _2015137344_ENT.Entities.Hospedaje
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Hospedaje</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioServicioTuristico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioServicioTuristico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomHospedaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomHospedaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CalificacionHospedaje.Calificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CalificacionHospedaje.Calificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaHospedaje.NomCategoriaHospedaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaHospedaje.NomCategoriaHospedaje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoHospedaje.NomTipoHospedaje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoHospedaje.NomTipoHospedaje)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

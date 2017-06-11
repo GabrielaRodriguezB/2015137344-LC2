@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "tarea-2015137344-CON",
+      "appliesTo": "2015137344-CON/",
+      "type": "command"
+    }
+  ]
+}

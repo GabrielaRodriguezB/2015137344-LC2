@@ -1,0 +1,43 @@
+﻿@model _2015137344_ENT.Entities.VentaPaquete
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VentaPaquete</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MedioPago.NomMedioPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedioPago.NomMedioPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoAPagar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoAPagar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComprobantePagoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComprobantePagoId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VentaPaqueteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
